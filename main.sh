@@ -4,11 +4,8 @@ add-apt-repository https://ppa.pika-os.com
 add-apt-repository ppa:pikaos/pika
 add-apt-repository ppa:kubuntu-ppa/backports
 # Clone Upstream
+cd ./xpad-noone-debian
 git clone https://github.com/medusalix/xpad-noone
-cp -rvf ./debian ./xpad-noone
-cp -rvf ./modules-load-d-xpad-noone.conf ./xpad-noone
-cp -rvf ./Makefile ./xpad-noone
-cd ./xpad-noone
 
 # Get build deps
 apt-get build-dep ./ -y
