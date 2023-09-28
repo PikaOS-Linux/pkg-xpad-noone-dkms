@@ -1,3 +1,5 @@
+#! /bin/bash
+
 # Clone Upstream
 cd ./xpad-noone-debian
 git clone https://github.com/medusalix/xpad-noone
@@ -6,8 +8,7 @@ git clone https://github.com/medusalix/xpad-noone
 apt-get build-dep ./ -y
 
 # Build package
-LOGNAME=root dh_make --createorig -y -l -p xpad-noone_1.0
-dpkg-buildpackage
+dpkg-buildpackage --no-sign
 
 # Move the debs to output
 cd ../
